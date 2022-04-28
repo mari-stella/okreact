@@ -1,19 +1,15 @@
-import './App.css'
-import Comp from './components/Comp.jsx'
+import Comp from './components/Comp.jsx';
 
 function App(props) {
-  const list = ['hello', 'helloo', 'hellooo'];
+  const list = ['hello1', 'hello2', 'hello3'];
   return (
     <div className="App">
       <h1>Main</h1>
-      {
-        list.map(item => (
-          <Comp value={item} />
-         ))
-      }
+      {list.map((item, index) => (
+        <Comp value={item} key={index} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default App
-
+export default App;
